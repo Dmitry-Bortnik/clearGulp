@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Клиенты
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        .wrapper
+            include include/header.pug
+            .full-width.-flex
+                include include/left-menu.pug
+                .content
+                    .ts__header.-flex.-center
+                        .title Клиенты
+                        a.add-plus(href="#", data-remodal-target="add-client")
+                    .clients
+                        .c__table
+                            .c__table__row(href="#")
+                                .c__table__col Наименование
+                                .c__table__col ИНН
+                                .c__table__col Контактное лицо
+                                .c__table__col Адрес
+                            a.c__table__row(href="#")
+                                .c__table__col АКН Развитие <span>ИП Логинов Павел</span>
+                                .c__table__col 024203330298
+                                .c__table__col Айнур Кильдибеков <br>8 (999) 999-99-99
+                                .c__table__col Уфа, ул. Менделеева, 23/2
+                                .c__table__col 
+                            a.c__table__row(href="#")
+                                .c__table__col Юлия Вентиляция <span>ООО «Система»</span>
+                                .c__table__col 024203330298
+                                .c__table__col Айнур Кильдибеков <br>8 (999) 999-99-99
+                                .c__table__col Уфа, ул. Менделеева, 23/2
+                                .c__table__col 
+    include include/modals.pug
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="/js/scripts.js")

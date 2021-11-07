@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Задачи вертикальный вид
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        .wrapper
+            include include/header.pug
+            .full-width.-flex
+                include include/left-menu.pug
+                .content
+                    .ts__header.-flex.-center
+                        .title Задачи
+                        .ts__view.-flex
+                            a.ts__vertical-view.active(href="#") 
+                                span
+                            a.ts__horizontal-view(href="#") 
+                                span
+                    .ts__filter.-flex.-center.-end
+                        .ts__filter__title Фильтр
+                        .ts__filter__col
+                            span По контрагенту
+                            select
+                                option(value="Все контрагенты") Все контрагенты
+                                option(value="Все контрагенты") Все контрагенты 1
+                        .ts__filter__col
+                            span По статусу
+                            select
+                                option(value="Все статусы") Все статусы
+                                option(value="В работе") В работе
+                        .ts__filter__col
+                            span Завершенные в период
+                            select
+                                option(value="За всё время") За всё время
+                                option(value="За последнюю неделю") За последнюю неделю
+                    .ts__vertical
+                        .ts__vertical__slide.slider
+                            div 
+                                .task__col.task__init 
+                                    .task__col__header 
+                                        span Инициация
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#", data-remodal-target="error")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="delete")
+                                        .task__col__title Дизайн
+                                        span ООО «Система» <br> 50 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="success")
+                                        .task__col__title Наполнение контентом
+                                        span ООО «Система» <br> 50 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="success")
+                                        .task__col__title Наполнение контентом
+                                        span ООО «Система» <br> 50 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="success")
+                                        .task__col__title Наполнение контентом
+                                        span ООО «Система» <br> 50 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="success")
+                                        .task__col__title Наполнение контентом
+                                        span ООО «Система» <br> 50 000 руб.
+                                    a.task__col__item(href="#", data-remodal-target="success")
+                                        .task__col__title Наполнение контентом
+                                        span ООО «Система» <br> 50 000 руб.
+                            div 
+                                .task__col.task__submitted
+                                    .task__col__header 
+                                        span Передан на исполненение
+                                         .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__inwork
+                                    .task__col__header 
+                                        span В работе
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__completed
+                                    .task__col__header 
+                                        span Выполнен
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__testing
+                                    .task__col__header 
+                                        span Тестирование
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__client
+                                    .task__col__header 
+                                        span Согласование с клиентом
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__customer-accepted
+                                    .task__col__header 
+                                        span Принят клиентом
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__akt-signed
+                                    .task__col__header 
+                                        span Акт подписан
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+                            div 
+                                .task__col.task__approved
+                                    .task__col__header 
+                                        span Утвержден руководителем
+                                        .task__col__summ 0 руб.
+                                    a.task__col__item(href="#")
+                                        .task__col__title Верстка
+                                        span ООО «Система» <br> 20 000 руб.
+    include include/modals.pug
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="/js/scripts.js")

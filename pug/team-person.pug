@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Карточка сотрудника
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        .wrapper
+            include include/header.pug
+            .full-width.-flex
+                include include/left-menu.pug
+                .content
+                    .ts__header.-flex.-center.-wrap
+                        a(href="#").to-back Вернуться к сотрудникам
+                        .title Айнур Кильдибеков
+                    .tabs
+                        a.active(href="#") О сотруднике
+                        a(href="#") Задачи
+                        a(href="#") Зарплата
+                    .c__row.content-white.client-info
+                        .c__col-12
+                            .client-info__row
+                                span Официальное наименование
+                                div ainur@fijiweb.ru
+                            .client-info__row
+                                span Пароль
+                                input(type="password", value="123124")
+                            .client-info__row
+                                span Роли
+                                select
+                                    option(value="1") Исполнитель
+                            .client-info__row
+                                .-flex.-center
+                                    div Исполнитель
+                                    a.delete(href="#") Удалить
+                            .client-info__row
+                                a(href="#") Добавить
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="/js/scripts.js")

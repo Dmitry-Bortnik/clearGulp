@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Авторизация
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        .auth__content
+            .auth__form
+                .auth__logo
+                    img(src="/img/logo.svg", alt="")
+                form(action="#")
+                    .field-row
+                        label E-mail
+                        input(type="email")
+                    .field-row
+                        label Пароль
+                        input(type="password")
+                    button.btn.btn-fillblue Войти
+    include include/modals.pug
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="/js/scripts.js")

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Команда
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        .wrapper
+            include include/header.pug
+            .full-width.-flex
+                include include/left-menu.pug
+                .content
+                    .ts__header.-flex.-center.-wrap
+                        .title Команда
+                        a.add-plus(href="#", data-remodal-target="add-person")
+                    .team
+                        .c__table
+                            .c__table__row(href="#")
+                                .c__table__col Наименование
+                                .c__table__col Email
+                                .c__table__col Роли
+                            a.c__table__row(href="#")
+                                .c__table__col Айнур Кильдибеков
+                                .c__table__col ainur@fijiweb.ru
+                                .c__table__col Исполнитель 
+                            a.c__table__row(href="#")
+                                .c__table__col Александра Сиразетдинова
+                                .c__table__col designer@fijiweb.ru
+                                .c__table__col Исполнитель, Менеджер проектов
+    include include/modals.pug
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="/js/scripts.js")

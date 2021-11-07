@@ -1,0 +1,91 @@
+.remodal(data-remodal-id="add-client", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    .title Новый клиент
+    form(action="#")
+        .field-row
+            label Наименование (псевдоним)
+            input(type="text")
+        .field-row
+            label Официальное наименование
+            input(type="text")
+        .field-row
+            label ИНН
+            input(type="text")
+        .field-row
+            label Адрес
+            input(type="text")
+        button.btn.btn-fillblue Добавить клиента
+
+.remodal(data-remodal-id="add-person", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    .title Новый cотрудник
+    form(action="#")
+        .field-row
+            label Псевдоним
+            input(type="text")
+        .field-row
+            label Email
+            input(type="text")
+        .field-row
+            label Пароль
+            input(type="text")
+        .field-row
+            label Роли
+            select
+                option(value="1") Руководитель
+                option(value="2") Дизайнер
+        button.btn.btn-fillblue Добавить сотрудника
+
+.remodal(data-remodal-id="add-contact-client", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    form(action="#")
+        .field-row
+            label ФИО
+            input(type="text", value="Иванов Петр Семенович")
+        .field-row
+            label Должность
+            input(type="text", value="Менеджер по продажам")
+        .field-row
+            label Телефоны
+            .-flex.-center
+                input(type="text", value="8 (917) 342 65 78")
+                a.delete-form-row(href="#") 
+        .field-row
+            .-flex.-center
+                input(type="text", value="8 (917) 342 65 78")
+                input.dop-input(type="text", value="1234")
+                a.delete-form-row(href="#") 
+        .field-row
+            a.form-row-add(href="#") + добавить
+        .field-row
+            label E-mail
+             .-flex
+                input(type="text", value="Ivanov@mail.ru")
+                a.form-row-delete(href="#") 
+        .field-row
+            a.form-row-add(href="#") + добавить
+        .field-row__btns.-flex.-center
+            button.btn.btn-fillblue Сохранить
+            a.form-row__cancel(href="#") Удалить 
+
+.remodal.center-text.remodal-alert(data-remodal-id="error", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    .title.red-text Ошибка!
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    div.btns-control.-flex.-center
+        a.btn.btn-fillblue(href="#", data-remodal-action="close") Закрыть
+
+.remodal.center-text.remodal-alert(data-remodal-id="delete", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    .title Удалить
+    p Вы уверены, что хотите удалить<br> Lorem ipsum dolor sit amet?
+    div.btns-control.-flex.-center
+        a.btn.btn-fillblue(href="#", data-remodal-action="close") Закрыть
+        a.btn.btn-pink(href="#") Подтвердить
+
+.remodal.center-text.remodal-alert(data-remodal-id="success", data-remodal-options="hashTracking: false, closeOnOutsideClick: true")
+    button.remodal-close(data-remodal-action="close")
+    .title Операция выполнена успешно
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua.
+    div.btns-control.-flex.-center
+        a.btn.btn-fillblue(href="#", data-remodal-action="close") Закрыть
