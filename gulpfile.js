@@ -13,14 +13,14 @@ let path = {
         html: [source_folter + '/*.html', '!' + source_folter + '/_*.html'],
         css: source_folter + '/scss/style.scss',
         js: source_folter + '/js/script.js',
-        img: source_folter + '/img/**/*.(png|jpg|gif|ico|svg|webp)',
+        img: source_folter + '/img/**/*.{png,jpg,gif,ico,svg,webp}',
         fonts: source_folter + '/fonts/*',
     },
     watch: {
         html: source_folter + '/**/*.html',
         css: source_folter + '/scss/**/*.scss',
         js: source_folter + '/js/**/*script.js',
-        img: source_folter + '/img/**/*.(png|jpg|gif|ico|svg|webp)',
+        img: source_folter + '/img/**/*.{png,jpg,gif,ico,svg,webp}',
     },
     clean: './' + project_folder + '/'
 }
@@ -37,7 +37,8 @@ let { scr, dest,  src } = require('gulp'),
     imagemin = require('gulp-imagemin'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter = require('gulp-fonter');
+    fonter = require('gulp-fonter'),
+    svgSprite = require('gulp-svg-sprite');
 
 function browserSync(params) {
     browsersync.init({
@@ -119,7 +120,18 @@ gulp.task('otf2ttf', function () {
         .pipe(dest(source_folter + '/fonts'))
 })
 
-
+gulp.task('svgSprite', function () {
+    return gulp.src([source_folter + '/img/iconsprite/*.svg'])
+        .pipe(svgSprite({
+            mode: {
+                stack:{
+                    sprite: '../img/icons/icons.svg',
+                    example: true
+                }
+            }
+        }))
+        .pipe(dest(path.build.img))
+})
 
 function clean(param) {
     return del(path.clean);
